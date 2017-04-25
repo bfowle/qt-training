@@ -23,7 +23,8 @@ public:
     PictureModel(const AlbumModel &albumModel, QObject *parent = 0);
 
     QModelIndex addPicture(const Picture &picture);
-    void setAlbumId(int albumId);
+    Q_INVOKABLE void addPictureFromUrl(const QUrl &fileUrl);
+    Q_INVOKABLE void setAlbumId(int albumId);
     void clearAlbum();
 
     int rowCount(const QModelIndex &parent = QModelIndex()) const override;
